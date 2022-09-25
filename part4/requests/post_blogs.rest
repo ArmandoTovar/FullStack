@@ -1,0 +1,55 @@
+POST http://localhost:3001/api/blogs
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoicm9vdHMiLCJpZCI6IjYzMTIwM2JlOGJmMzVmZWQyNjYxMjE4YSIsImlhdCI6MTY2MjEyNjU5OH0.A2sf-A04qyEhErZKoZqRKcz4CuwOqa4C2DHjvIHlPJs
+
+{
+    "title": "nueva soy de root",
+    "author": "asdasdfgdfgd",
+    "url": "asdas",
+    "likes": 2,
+    "user":"631203be8bf35fed2661218a"
+}
+###
+
+POST http://localhost:3001/api/users
+content-type: application/json
+
+{"user": "roots","name": "prueba","password": "12345"}
+
+
+
+###
+
+POST http://localhost:3001/api/login
+content-type: application/json
+
+{"user": "roots","password": "12345"}
+
+
+
+###
+DELETE http://localhost:3001/api/blogs/630fb562c2184840d9a50c12
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoic2Zhc2Rhc2RhcyIsImlkIjoiNjMwZmIxOWYyMzc2NzNhMjk5ZTVmYzFjIiwiaWF0IjoxNjYxOTg0Nzg3fQ.xwo5tCy37gFwgHq9_gqoK7V9dTwMkhcZwVDHnegTlSg
+
+###
+PUT http://localhost:3001/api/blogs/63120c74c401391150547afb
+content-type: application/json
+
+{
+    "title": "sdfsdf",
+    "author": "String",
+    "url": "Holaaa",
+    "likes": 2,
+}
+
+###
+POST http://localhost:3001/api/testing/reset
+
+###
+
+POST  http://localhost:3001/api/blogs/63188cee1b38ce881f3797a0/comments
+content-type: application/json
+
+{
+    "comment": "sdfsdf"
+}
